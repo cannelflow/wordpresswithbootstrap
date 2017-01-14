@@ -1,7 +1,7 @@
 <?php
 
 // Theme Support
-  function wpbootstrap_theme_setup(){
+function wpbootstrap_theme_setup(){
     add_theme_support('post-thumbnails');
     // Nav Menus
     register_nav_menus(array(
@@ -9,11 +9,11 @@
     ));
     // Post Formats
     add_theme_support('post-formats', array('aside', 'gallery'));
-  }
+}
   
 add_action('after_setup_theme','wpbootstrap_theme_setup');
 
-//add js & 
+//add js & css
 
 function wpbootstrap_scripts() {
 	
@@ -54,6 +54,16 @@ if( !function_exists('ie_scripts')) {
    	}
    	add_action('wp_head', 'ie_scripts');
 } // end if
+
+/**
+ * Replaces the excerpt "more" text by a link.
+ */
+function new_excerpt_more($more) {
+    global $post;
+	return '... <a class="moretag" href="'. get_permalink($post->ID) . '"> continue reading &raquo;</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+
 
 // Register Nav Walker class_alias
 require_once('wp_bootstrap_navwalker.php');

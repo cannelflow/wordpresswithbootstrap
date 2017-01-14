@@ -230,3 +230,9 @@ h6, .h6 {
 .blog-nav a:hover {
     color:#666;
 }
+
+.blog-post-img img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+}
