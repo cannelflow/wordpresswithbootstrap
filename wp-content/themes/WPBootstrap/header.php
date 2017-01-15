@@ -38,4 +38,5 @@
       <div class="blog-header">
         <h1 class="blog-title"><?php bloginfo('name') ; ?></h1>
         <p class="lead blog-description"><?php bloginfo('description') ; ?></p>
-      </div>    
+      </div>
+    </div>  

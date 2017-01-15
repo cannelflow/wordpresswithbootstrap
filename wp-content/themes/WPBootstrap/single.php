@@ -1,6 +1,7 @@
 <?php get_header() ; ?>
 
-      <div class="row">
+<div class="container">
+     <div class="row">
 
         <div class="col-sm-8 blog-main">
           
@@ -18,5 +19,10 @@
           </nav>
 
         </div><!-- /.blog-main -->
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <?php get_sidebar() ; ?>
+        </div>  
+      </div><!-- /.row -->  
+</div>
 
 <?php get_footer() ; ?>
